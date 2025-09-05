@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dice Roll Simulator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Dice Roll Simulator</h1>
-    
-    <div class="dice">
-      <img id="diceImage" src="dice1.png" alt="Dice">
-    </div>
-    
-    <button onclick="rollDice()">Roll Dice</button>
-    
-    <h2>Roll History</h2>
-    <ul id="rollHistory"></ul>
-  </div>
+    <h1>DICE ROLL SIMULATOR</h1>
 
-  <script src="script.js"></script>
+    
+    <div class="dice-container">
+        <div>
+            <h2>Player 1</h2>
+            <div class="dice" id="dice1">&#127922;</div>
+        </div>
+        <div>
+            <h2>Player 2</h2>
+            <div class="dice" id="dice2">&#127922;</div>
+        </div>
+    </div>
+
+    
+    <h2 id="winner-msg"></h2>
+
+   
+    <div class="scoreboard">
+        <p>Player 1 Score: <span id="score1">0</span></p>
+        <p>Player 2 Score: <span id="score2">0</span></p>
+    </div>
+
+    
+    <button id="rollBtn">Roll Dice</button>
+
+   
+    <ul id="roll-history"></ul>
+
+    <script src="script.js"></script>
 </body>
 </html>

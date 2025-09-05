@@ -1,74 +1,93 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.container {
-  text-align: center;
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,255,255,0.4);
-  width: 300px;
+    margin: 0;
+    text-align: center;
+    background-color: darkblue;
+    font-family: Arial, sans-serif;
+    color: black;
 }
 
 h1 {
-  margin-bottom: 20px;
-  color: cyan;
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: yellow;
+    text-shadow: 2px 2px black;
 }
 
-.dice img {
-  width: 120px;
-  margin: 20px 0;
-  filter: drop-shadow(0 0 8px cyan);
+
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
 }
 
-.spin {
-  animation: spinDice 0.5s linear infinite;
+.dice {
+    font-size: 7rem;
+    margin-bottom: 10px;
 }
 
-@keyframes spinDice {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(90deg); }
-  50% { transform: rotate(180deg); }
-  75% { transform: rotate(270deg); }
-  100% { transform: rotate(360deg); }
+
+#winner-msg {
+    font-size: 2rem;
+    color: yellow;
+    margin: 1rem 0;
+}
+
+
+.scoreboard {
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.roll-animation {
+    animation: roll 1s 1;
+}
+
+@keyframes roll {
+    0% {
+         transform: rotate(0deg);
+         }
+
+    100% {
+         transform: rotate(360deg);
+         }
 }
 
 button {
-  background: cyan;
-  color: #0f172a;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    background-color: yellow;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-  background: #22d3ee;
+    background-color: skyblue;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-  max-height: 120px;
-  overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 2rem auto;
 }
 
-ul li {
-  background: #0f172a;
-  margin: 5px 0;
-  padding: 8px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,255,255,0.3);
+li {
+    font-size: 1.5rem;
+    padding: .5rem;
+    background-color: whitesmoke;
+    border-radius: 5rem;
+    box-shadow: 2px 2px 6px black;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+li span {
+    font-size: 2rem;
+    margin-left: 1rem;
 }
